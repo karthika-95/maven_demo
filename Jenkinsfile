@@ -3,12 +3,12 @@ pipeline {
     stages {
 stage('scm') {
 steps {
-    git 'https://github.com/ganeshlovesdevops/maven_demo.git'
+    git 'https://github.com/karthika-95/maven_demo'
     }
 }
     stage('build') {
     steps {
-        withMaven(maven : 'mymaven'){
+        withMaven(maven : 'maven'){
         bat "mvn clean install"
     }
     }
